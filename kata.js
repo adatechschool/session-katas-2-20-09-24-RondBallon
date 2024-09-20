@@ -15,7 +15,7 @@
     
 } Nop...*/
 
-let deck = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
+let carte = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
 let types = ["♠︎", "♣︎", "♡", "♢"];
 
 function createDeck(arr1, arr2) {
@@ -28,11 +28,11 @@ function createDeck(arr1, arr2) {
     return newArr;
 }
 
-let fullDeck = createDeck(deck, types);
-console.log(fullDeck);
+let deck = createDeck(carte, types);
+console.log(deck);
 
 function shuffleDeck (array) {
-    let actuelIndex = fullDeck.length;
+    let actuelIndex = deck.length;
     while (actuelIndex !== 0) { // Tant qu'on peut mélanger 
         let randomIndex = Math.floor(Math.random() * actuelIndex);
         actuelIndex --;
@@ -40,13 +40,14 @@ function shuffleDeck (array) {
     }
 }
 
-shuffleDeck(fullDeck);  
-console.log(fullDeck); //
+shuffleDeck(deck);  
+console.log(deck); //
 
 function deal (cartes) {
-    let distrib = fullDeck.splice(2,2);
+    let distrib = deck.splice(2,2);
     return distrib;
 }
+
 
 player1 = deal(2);
 player2 = deal(2);
@@ -54,10 +55,16 @@ console.log(player1);
 console.log(player2);
 
 function flop (deal) {
-    let discard = fullDeck.splice(1,1);
-    let cards = fullDeck.splice()
+    let cards = [];
+    cards.push(deal(1,1),deal(1,1), deal(1,0))
     
-}
+} // 16:42 j'arrête, je pense qu'il faut push dans [] 3 cartes avec deal() et appeler deal() 
+    // pour bruler la carte avant chaque tour
+
+
+
+
+
 
 
 
