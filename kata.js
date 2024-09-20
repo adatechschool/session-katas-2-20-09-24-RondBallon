@@ -30,3 +30,28 @@ function createDeck(arr1, arr2) {
 
 let fullDeck = createDeck(deck, types);
 console.log(fullDeck);
+
+function shuffleDeck (array) {
+    let actuelIndex = fullDeck.length;
+    while (actuelIndex !== 0) { // Tant qu'on peut mélanger 
+        let randomIndex = Math.floor(Math.random() * actuelIndex);
+        actuelIndex --;
+        [array[actuelIndex], array[randomIndex]] = [array[randomIndex], array[actuelIndex]]; // Swap de l'élement mélangé et celui en "place"
+    }
+}
+
+shuffleDeck(fullDeck);  
+console.log(fullDeck); //
+
+function deal (cartes) {
+    let distrib = fullDeck.splice(2,2);
+    return distrib;
+}
+
+player1 = deal(2);
+player2 = deal(2);
+console.log(player1);
+console.log(player2);
+
+
+
