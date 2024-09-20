@@ -53,5 +53,15 @@ player2 = deal(2);
 console.log(player1);
 console.log(player2);
 
+function flop (deal) {
+    let discard = fullDeck.splice(1,1);
+    let cards = fullDeck.splice()
+    
+}
+
+
+
+    
+
 
 
